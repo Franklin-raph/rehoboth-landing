@@ -1,113 +1,99 @@
 import Image from "next/image";
+import Link from "next/link";
+import { FaGoogle } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa6";
+import { BsLightningCharge } from "react-icons/bs";
+
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="relative">
+      <div className="bg-red-500 w-[700px] mx-auto h-[500px] absolute left-[50%] top-[-5%]"  style={{ transform: "translate(-50%, 0%)" }}></div>
+      <nav className="flex items-center justify-between py-5 shadow-lg">
+        <div className="flex items-center gap-10">
+          <Link  href='/'>
+            <img src="./images/rehoboth-logo.svg" alt="" />
+          </Link>
+          <ul className="flex items-center gap-10">
+            <li className="text-[#667085] flex items-center gap-2">
+              <p>Blog</p>
+              <FaChevronDown />
+            </li>
+            <li className="text-[#667085]">
+              <Link href='#'>Faq</Link>
+            </li>
+          </ul>
+        </div>
+        <button className="flex items-center gap-2 bg-primary-color text-white px-4 py-[10px] rounded-[8px]">
+          <BsLightningCharge />
+          <p>Leaderboard</p>
+        </button>
+      </nav>
+      <div className="min-h-screen bg-gray-50 flex flex-col justify-center items-center">
+        <div className="bg-white px-8 pt-8 pb-5 rounded-[16px] shadow-lg w-full max-w-[588px]">
+          <div className="top-bg relative top-[-20px] flex items-center justify-center w-[300px] mx-auto">
+            <img src="./images/logo.svg" alt="Rehoboth Finance Logo" className="mx-auto mb-4 relative top-[-65px]" />
+          </div>
+          <div className="text-center mb-12 mt-[-80px] relative z-[100]">
+            <h2 className="text-2xl font-semibold">Create account</h2>
+            <p className="text-[#667085] text-[14px]">Dive back into a world of premium features and explore the endless possibilities that await. Reconnect and continue your journey today.</p>
+          </div>
+          <div className="flex flex-col w-[300px] mx-auto">
+
+            <div className="w-full flex flex-col gap-3 mb-[20px]">
+              <button className="border border-[#D0D5DD] text-[#344054] py-2 px-4 rounded-[8px] flex items-center justify-center w-full shadow">
+                <img src="./images/google.svg" alt="Google Logo" className="w-5 h-5 mr-2" />
+                Sign in with Google
+              </button>
+              <button className="border border-[#D0D5DD] text-[#344054] py-2 px-4 rounded-[8px] flex items-center justify-center w-full shadow">
+                <img src="./images/apple.svg" alt="Google Logo" className="w-5 h-5 mr-2" />
+                Sign in with Discord
+              </button>
+            </div>
+            
+            <div className="text-center text-[#121212] flex items-center justify-center gap-2 my-[10px]">
+              <div className="h-[1px] bg-[#dbdbdb] w-full"></div>
+              <p className="text-[#667085]">OR</p>
+              <div className="h-[1px] bg-[#dbdbdb] w-full"></div>
+            </div>
+
+            <div className="mb-5">
+              <label htmlFor="email" className="text-[#121212] gont-[500] text-[14px] mb-1 block">Email</label>
+              <input
+                type="email"
+                placeholder="olivia@rehoboth.com"
+                className="border border-gray-300 text-[#707070] p-2 rounded-[8px] w-full"
+              />
+            </div>
+            <div>
+              <label htmlFor="password" className="text-[#121212] gont-[500] text-[14px] mb-1 block">Password</label>
+              <input
+                type="password"
+                placeholder="********"
+                className="border border-gray-300 p-2 rounded-[8px] w-full"
+              />
+            </div>
+
+            <button className="bg-primary-color text-white py-2 px-4 rounded-[8px] mt-5">
+              Create Account
+            </button>
+            <div className="text-center text-[#808080] mt-[70px] text-[14px]">
+              Already have an account? <a href="/login" className="text-blue-600">Log in</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className="mt-8 flex items-center justify-between">
+        <p className="text-[#808080] text-[12px]">
+          &copy; {new Date().getFullYear()} Rehoboth finance. All rights reserved.
+        </p>
+        <div className="text-[#808080] text-[12px]">
+          <a href="/terms-of-use" className="mr-4">Terms of Use</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+        </div>
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </div>
   );
 }
