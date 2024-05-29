@@ -5,3 +5,8 @@
 .top-bg{
   background-image: url('../public/images/toptexture.svg');
 }
+
+.blury-bg{
+  background-color: #eff2ff;
+  filter: blur(100px);
+}
