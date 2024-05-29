@@ -32,7 +32,7 @@ const TopNav = () => {
         </div>
       </div>
       <div className='flex items-center gap-2'>
-        <img src="./images/moon.svg" alt="" />
+        {/* <img src="./images/moon.svg" alt="" /> */}
         <div className='p-2 rounded-[8px] bg-[#B9B9B926]'>
           <img src="./images/notification.svg" alt="" />
         </div>
