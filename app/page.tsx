@@ -1,16 +1,22 @@
+"use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa6";
 import { BsLightningCharge } from "react-icons/bs";
+import { useRouter } from "next/navigation";
 
 
 
 export default function Home() {
+
+  const router = useRouter()
+
   return (
     <div className="relative">
-      <nav className="flex items-center justify-between py-5 relative z-[11] bg-white">
+      <nav className="flex items-center justify-between py-5 relative z-[11] bg-white px-[100px]">
         <div className="flex items-center gap-10">
           <Link  href='/'>
             <img src="./images/rehoboth-logo.svg" alt="" />
@@ -78,7 +84,7 @@ export default function Home() {
                 />
               </div>
 
-              <button className="bg-primary-color text-white py-2 px-4 rounded-[8px] mt-5">
+              <button onClick={() => router.replace('/overview')} className="bg-primary-color text-white py-2 px-4 rounded-[8px] mt-5">
                 Create Account
               </button>
               <div className="text-center text-[#808080] mt-[70px] text-[14px]">
@@ -88,13 +94,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mt-8 flex items-center justify-between">
+      <div className="mt-[100px] mb-5 mx-10 flex items-center justify-between">
         <p className="text-[#808080] text-[12px]">
           &copy; {new Date().getFullYear()} Rehoboth finance. All rights reserved.
         </p>
-        <div className="text-[#808080] text-[12px]">
-          <a href="/terms-of-use" className="mr-4">Terms of Use</a>
-          <a href="/privacy-policy">Privacy Policy</a>
+        <div className="text-[#808080] text-[12px] flex items-center gap-4">
+          <Link href="#">Privacy Policy</Link>
+          <Link href="#" className="mr-4">Terms of Use</Link>
         </div>
       </div>
     </div>

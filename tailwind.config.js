@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       colors: {
         'primary-color': '#072AC8',
+        'custom-gradient': 'linear-gradient(90deg, #5A78FF 0%, #072AC8 100%)',
       }
     },
   },
