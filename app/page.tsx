@@ -84,7 +84,7 @@ export default function Home() {
                 />
               </div>
 
-              <button onClick={() => router.replace('/overview')} className="bg-primary-color text-white py-2 px-4 rounded-[8px] mt-5">
+              <button onClick={() => router.replace('/get-started')} className="bg-primary-color text-white py-2 px-4 rounded-[8px] mt-5">
                 Create Account
               </button>
               <div className="text-center text-[#808080] mt-[70px] text-[14px]">
