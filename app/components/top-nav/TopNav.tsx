@@ -1,6 +1,7 @@
 "use client"
 
 import Image, { ImageLoaderProps } from 'next/image';
+import { usePathname } from 'next/navigation';
 import { CiSearch } from 'react-icons/ci'
 import { IoIosLogOut } from 'react-icons/io'
 import { IoNotificationsOutline } from 'react-icons/io5'
@@ -14,12 +15,16 @@ const TopNav = () => {
         return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
       }
 
+    const pathname = usePathname()
+    console.log(pathname);
+    
+
   return (
     <div className='bg-[#FFFFFF] border border-[#BDBDBD] rounded-[8px] flex items-center justify-center gap-[70px] w-[95%] py-[1.2rem] top-0 right-0 z-[99] mx-auto'>
       <div className='flex items-center gap-5'>
         <div className='flex items-center gap-2'>
           <img src="./images/overview.svg" alt="" />
-          <p className='text-[#737985]'>Overview</p>
+          <p className='text-[#737985] capitalize'>{pathname.replace(/^\//, '')}</p>
         </div>
         <div className='flex items-center gap-2 bg-[#F8F8F8] border border-[#BDBDBD] rounded-[4px] px-[12px] py-[7px] w-[400px]'>
           <CiSearch className='text-[#828282] text-[26px] cursor-pointer'/>
