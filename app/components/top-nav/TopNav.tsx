@@ -11,13 +11,7 @@ import { RxDashboard } from "react-icons/rx";
 
 const TopNav = () => {
 
-    const imageLoader = ({ src, width, quality }: ImageLoaderProps): string => {
-        return `https://example.com/${src}?w=${width}&q=${quality || 75}`;
-      }
-
-    const pathname = usePathname()
-    console.log(pathname);
-    
+  const pathname = usePathname()
 
   return (
     <div className='bg-[#FFFFFF] border border-[#BDBDBD] rounded-[8px] flex items-center justify-center gap-[70px] w-[95%] py-[1.2rem] top-0 right-0 z-[99] mx-auto'>
