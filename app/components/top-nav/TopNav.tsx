@@ -1,7 +1,7 @@
 "use client"
 
 import Image, { ImageLoaderProps } from 'next/image';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { CiSearch } from 'react-icons/ci'
 import { IoIosLogOut } from 'react-icons/io'
 import { IoNotificationsOutline } from 'react-icons/io5'
@@ -12,6 +12,7 @@ import { RxDashboard } from "react-icons/rx";
 const TopNav = () => {
 
   const pathname = usePathname()
+  const router = useRouter()
 
   return (
     <div className='bg-[#FFFFFF] border border-[#BDBDBD] rounded-[8px] flex items-center justify-center gap-[70px] w-[95%] py-[1.2rem] top-0 right-0 z-[99] mx-auto'>
@@ -30,7 +31,7 @@ const TopNav = () => {
         <div className='p-2 rounded-[8px] bg-[#B9B9B926]'>
           <img src="./images/notification.svg" alt="" />
         </div>
-        <button className="flex items-center gap-2 text-white px-4 py-[10px] rounded-[8px] cutom-btn-gradient">
+        <button className="flex items-center gap-2 text-white px-4 py-[10px] rounded-[8px] cutom-btn-gradient" onClick={() => router.replace('/leader-board')}>
           <img src="./images/ranking.svg" alt="" />
           <p>Leaderboard</p>
         </button>
