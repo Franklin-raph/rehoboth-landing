@@ -46,11 +46,11 @@ const EarnPoointsComponent = () => {
 
   return (
     <div>
-        <>
+        <div className='flex items-start bg-[#F5F5F5]'>
             <SideNav />
-            <div className="w-[84%] bg-[#F5F5F5] ml-auto">
+            <div className="w-[84%] bg-[#F5F5F5] ml-auto mb-10">
                 <TopNav />
-                <div className="p-[10px] bg-white mt-5 mx-[30px]">
+                <div className="px-[10px] pb-[30px] pt-[10px] bg-white mt-5 mx-[30px]">
                     <div className='flex items-start gap-5 p-3'>
                         <div className='w-[50%] bg-[#C7C7C71F] rounded-[12px] p-4'>
                             <p className='text-primary-color text-[30px]'>Onboarding: Earn Rehoboth Rewards</p>
@@ -166,7 +166,7 @@ const EarnPoointsComponent = () => {
                         </div>
                     </div>
                     <div className='px-[10px]'>
-                        <div className='bg-[#C7C7C71F] rounded-[11px] w-full p-[30px]'>
+                        <div className='bg-[#C7C7C71F] rounded-[11px] w-full p-[30px] border border-[#BDBDBD]'>
                             <div className='w-[70%] mb-20'>
                                 <p className='text-[32px] text-primary-color'>Special Missions</p>
                                 <p className='text-[#5D5D5D] font-[300] text-[14px] mt-3'>Do you want to boost your position on the Rehoboth reward leaderboard? You’re in the right place. Keep checking the Rehoboth Community Discord server and Twitter page to be notified about time-sensitive special missions that can earn you extra points.</p>
@@ -187,7 +187,7 @@ const EarnPoointsComponent = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
         {
             missionModal && <MissionModal setMissionModal={setMissionModal}/>
         }

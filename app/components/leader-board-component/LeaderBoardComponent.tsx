@@ -5,9 +5,9 @@ import SideNav from '../side-nav/SideNav'
 const LeaderBoardComponent = () => {
   return (
     <div>
-        <>
+        <div className='flex items-start bg-[#F5F5F5]'>
             <SideNav />
-            <div className="w-[84%] bg-[#F5F5F5] ml-auto">
+            <div className="w-[84%] bg-[#F5F5F5] ml-auto mb-[30px]">
                 <TopNav />
                 <div className="p-[10px] bg-white mt-5 mx-[30px]">
                     <div className='bg-primary-color w-full h-[150px] rounded-[11px] text-white p-3'>
@@ -43,7 +43,7 @@ const LeaderBoardComponent = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     </div>
   )
 }

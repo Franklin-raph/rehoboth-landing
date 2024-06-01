@@ -10,7 +10,7 @@ const SideNav = () => {
     const router = useRouter()
 
   return (
-    <div className='bg-[#ffffff] border border-[#BDBDBD] scrollbar w-[16%] h-[100vh] top-0 fixed overflow-y-auto overflow-x-hidden' style={{ borderTopRightRadius:'8px', borderBottomRightRadius:'8px' }}>
+    <div className='bg-[#ffffff] border border-[#BDBDBD] scrollbar w-[18%]' style={{ borderTopRightRadius:'8px', borderBottomRightRadius:'8px' }}>
         <div className='p-5 border-b cursor-pointer' onClick={() => router.refresh()}>
             <img src="./images/rehoboth-logo.svg" alt="" />
         </div>
@@ -164,7 +164,7 @@ const SideNav = () => {
           </Link>
         </div>
 
-        <div className="mx-[32px] mt-10">
+        <div className="ml-[10px] mt-[15rem] mb-16">
           <div className="flex align-center">
               <img src="/images/Avatar.svg"className="w-[50px]" style={{ marginRight: 12, }} />
               <div>

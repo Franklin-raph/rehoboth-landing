@@ -15,7 +15,7 @@ const TopNav = () => {
   const router = useRouter()
 
   return (
-    <div className='bg-[#FFFFFF] border border-[#BDBDBD] rounded-[8px] flex items-center justify-center gap-[70px] w-[95%] py-[1.2rem] top-0 right-0 z-[99] mx-auto'>
+    <div className='bg-[#FFFFFF] border border-[#BDBDBD] rounded-[8px] flex items-center justify-center gap-[70px] w-[95%] py-[1.2rem] top-0 right-0 z-[99] mx-auto mt-[1.2rem]'>
       <div className='flex items-center gap-5'>
         <div className='flex items-center gap-2'>
           <img src="./images/overview.svg" alt="" />
