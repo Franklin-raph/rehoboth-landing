@@ -27,7 +27,7 @@ const LeaderBoardComponent = () => {
                         {
                             Array.from({ length: 10 }).map((item, index) => {
                                 return (
-                                    <div className='flex items-center justify-between my-12'>
+                                    <div className='flex items-center justify-between my-12' key={index}>
                                         <div className='flex items-center gap-7'>
                                             <p>{index + 1}.</p>
                                             <div className='flex items-center gap-3'>
