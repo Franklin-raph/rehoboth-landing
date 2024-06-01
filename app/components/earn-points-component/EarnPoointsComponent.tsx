@@ -175,7 +175,9 @@ const EarnPoointsComponent = () => {
                                 {
                                     specialMissionsArray.map((item, index) => {
                                         return (
-                                            <SpecialMissionsCard item={item} key={index} setMissionModal={setMissionModal} />
+                                            <div key={index}>
+                                                <SpecialMissionsCard item={item} setMissionModal={setMissionModal} />
+                                            </div>
                                         )
                                     })
                                 }
