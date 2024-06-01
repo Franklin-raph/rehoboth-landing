@@ -1,8 +1,13 @@
-import React from 'react'
+"use client" 
+
 import SideNav from '../side-nav/SideNav'
 import TopNav from '../top-nav/TopNav'
+import { useRouter } from 'next/navigation'
 
 const TopUpComponent = () => {
+
+  const router = useRouter()
+
   return (
     <div>
         <div className='flex items-start bg-[#F5F5F5]'>
@@ -15,7 +20,8 @@ const TopUpComponent = () => {
                     <p className='font-[300] text-[#737985]'>Buy crypto with your money</p>
                   </div>
                   <div className='flex items-center gap-5 mt-9'>
-                    <div className='bg-primary-color w-[280px] h-[336px] cursor-pointer'>
+
+                    <div className='bg-primary-color w-[280px] h-[336px] cursor-pointer' onClick={() => router.replace('/deposit-crypto')}>
                       <div className='bg-white p-1 rounded-full inline-block m-5'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                           <path opacity="0.4" d="M14.4242 11.4317C14.0998 11.7484 13.9144 12.2041 13.9608 12.6908C14.0303 13.525 14.795 14.1352 15.6292 14.1352H17.0968V15.0543C17.0968 16.6532 15.7914 17.9586 14.1925 17.9586H5.32517C3.72628 17.9586 2.4209 16.6532 2.4209 15.0543V9.856C2.4209 8.25711 3.72628 6.95172 5.32517 6.95172H14.1925C15.7914 6.95172 17.0968 8.25711 17.0968 9.856V10.9683H15.5365C15.1039 10.9683 14.71 11.1382 14.4242 11.4317Z" fill="#072AC8"/>
@@ -29,7 +35,8 @@ const TopUpComponent = () => {
                         <p className='text-[14px]'>Transfer crypto to your <br /> Rehoboth Wallet</p>
                       </div>
                     </div>
-                    <div className='bg-[#EBEFFF] w-[280px] h-[336px] cursor-pointer'>
+
+                    <div className='bg-[#EBEFFF] w-[280px] h-[336px] cursor-pointer' onClick={() => router.replace('/buy-with-fiat')}>
                       <div className='bg-white p-1 rounded-full inline-block m-5'>
                         <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
                           <path d="M17.3586 15.4346V17.7518H1.91028V15.4346C1.91028 15.0098 2.25786 14.6622 2.68269 14.6622H16.5861C17.011 14.6622 17.3586 15.0098 17.3586 15.4346Z" fill="#072AC8" stroke="#072AC8" stroke-width="1.15862" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -46,6 +53,7 @@ const TopUpComponent = () => {
                         <p className='text-[14px] text-[#757575]'>Buy crypto into your Rehoboth <br /> Wallet using fiat payment rails</p>
                       </div>
                     </div>
+
                   </div>
                 </div>
             </div>
