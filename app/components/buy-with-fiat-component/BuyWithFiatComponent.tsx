@@ -69,7 +69,7 @@ const BuyWithFiatComponent = () => {
                             <div className='flex items-cener justify-between mb-4'>
                                 {
                                     pricesArray.map((price, index) => (
-                                        <p className='bg-[#F1F1F1] rounded-full py-[6px] px-7'>${price}</p>
+                                        <p className='bg-[#F1F1F1] rounded-full py-[6px] px-7' key={index}>${price}</p>
                                     ))
                                 }
                             </div>
