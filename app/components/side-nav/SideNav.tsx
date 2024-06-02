@@ -69,10 +69,10 @@ const SideNav = () => {
 
         <div className=" my-10 text-white">
           <p className="text-[12px] text-[#98A2B3] mb-2 px-3">FINANCE</p>
-          <Link href='/top-up' className={ pathname === '/top-up'|| pathname === "/deposit-crypto" || "/buy-with-fiat" ? `flex items-center justify-between py-[10px] text-[#072AC8] bg-[#072AC81F] px-5` :`px-5 flex items-center justify-between py-[10px] text-[#101828]`}>
+          <Link href='/top-up' className={ pathname === '/top-up'|| pathname === "/deposit-crypto" || pathname === "/buy-with-fiat" ? `flex items-center justify-between py-[10px] text-[#072AC8] bg-[#072AC81F] px-5` :`px-5 flex items-center justify-between py-[10px] text-[#101828]`}>
             <div className="flex items-center">
               {
-                pathname === '/top-up' || pathname === "/deposit-crypto" || "/buy-with-fiat" ? 
+                pathname === '/top-up' || pathname === "/deposit-crypto" || pathname === "/buy-with-fiat" ? 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path opacity="0.8" d="M12.9002 2.52003L12.8702 2.59003L9.9702 9.32003H7.1202C6.4402 9.32003 5.8002 9.45003 5.2002 9.71003L6.9502 5.53003L6.9902 5.44003L7.0502 5.28003C7.0802 5.21003 7.1002 5.15003 7.1302 5.10003C8.4402 2.07003 9.9202 1.38003 12.9002 2.52003Z" fill="#072AC8"/>
                   <path d="M18.2897 9.52002C17.8397 9.39002 17.3697 9.32002 16.8797 9.32002H9.96973L12.8697 2.59002L12.8997 2.52002C13.0397 2.57002 13.1897 2.64002 13.3397 2.69002L15.5497 3.62002C16.7797 4.13002 17.6397 4.66002 18.1697 5.30002C18.2597 5.42002 18.3397 5.53002 18.4197 5.66002C18.5097 5.80002 18.5797 5.94002 18.6197 6.09002C18.6597 6.18002 18.6897 6.26002 18.7097 6.35002C18.9697 7.20002 18.8097 8.23002 18.2897 9.52002Z" fill="#072AC8"/>
