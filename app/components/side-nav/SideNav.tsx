@@ -84,7 +84,7 @@ const SideNav = () => {
                 :
                 <img src="./images/top-up.svg"/>
               }
-              <p className="ml-[10px]">Top-up</p>
+              <p className="ml-[10px]">Deposit</p>
             </div>
           </Link>
           <Link href='/payout' className={ pathname === '/payout' ? `flex items-center justify-between py-[10px] text-[#072AC8] bg-[#072AC81F] px-5` :`px-5 flex items-center justify-between py-[10px] text-[#101828]`}>
@@ -102,7 +102,7 @@ const SideNav = () => {
                   : 
                   <img src="./images/payout.svg"/>
               }
-                <p className="ml-[10px]">Payout</p>
+                <p className="ml-[10px]">Withdraw</p>
             </div>
           </Link>
           <Link href='/transactions' className={ pathname === '/transactions' ? `flex items-center justify-between py-[10px] text-[#072AC8] px-5 bg-[#072AC81F]` :`px-5 flex items-center justify-between py-[10px] text-[#101828]`}>

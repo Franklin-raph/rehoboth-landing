@@ -5,15 +5,15 @@ import TopNav from '../top-nav/TopNav'
 const GetStartedComponent = () => {
   return (
     <div>
-      <>
-        <SideNav />
-        <div className="w-[84%] bg-[#F5F5F5] ml-auto h-[100dvh]">
-          <TopNav />
-            <div className="px-[30px] py-[1rem]">
-              
+        <div className='flex items-start bg-[#F5F5F5]'>
+            <SideNav />
+            <div className="w-[84%] bg-[#F5F5F5] ml-auto">
+                <TopNav />
+                <div className="px-[30px] py-[1rem]">
+                
+                </div>
             </div>
-          </div>
-      </>
+        </div>
     </div>
   )
 }
