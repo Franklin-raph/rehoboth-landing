@@ -14,6 +14,10 @@ export default function Home() {
 
   const router = useRouter()
 
+  async function handleSignIn(){
+    router.replace('/get-started')
+  }
+
   return (
     <div className="relative">
       <nav className="flex items-center justify-between py-5 relative z-[11] bg-white px-[100px]">
@@ -84,7 +88,7 @@ export default function Home() {
                 />
               </div>
 
-              <button onClick={() => router.replace('/get-started')} className="bg-primary-color text-white py-2 px-4 rounded-[8px] mt-5">
+              <button onClick={handleSignIn} className="bg-primary-color text-white py-2 px-4 rounded-[8px] mt-5">
                 Create Account
               </button>
               <div className="text-center text-[#808080] mt-[70px] text-[14px]">
