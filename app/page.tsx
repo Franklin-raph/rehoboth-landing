@@ -15,7 +15,9 @@ export default function Home() {
   const router = useRouter()
 
   async function handleSignIn(){
-    router.replace('/get-started')
+    console.log("hello");
+    
+    router.push('/get-started')
   }
 
   return (

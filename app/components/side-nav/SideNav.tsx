@@ -77,10 +77,10 @@ const SideNav = () => {
               <p className="ml-[10px]">Wallet</p>
             </div>
           </Link>
-          <Link href='/deposit' className={ pathname === '/top-up'|| pathname === "/deposit" || pathname === "/buy-with-fiat" ? `flex items-center justify-between py-[10px] text-[#072AC8] bg-[#072AC81F] px-5` :`px-5 flex items-center justify-between py-[10px] text-[#101828]`}>
+          <Link href='/deposit' className={ pathname === '/top-up'|| pathname === "/deposit" || pathname === "/buy-with-fiat" || pathname.includes('/deposit') ? `flex items-center justify-between py-[10px] text-[#072AC8] bg-[#072AC81F] px-5` :`px-5 flex items-center justify-between py-[10px] text-[#101828]`}>
             <div className="flex items-center">
               {
-                pathname === '/top-up' || pathname === "/deposit-crypto" || pathname === "/buy-with-fiat" ? 
+                pathname === '/top-up' || pathname === "/deposit-crypto" || pathname === "/buy-with-fiat" || pathname.includes('/deposit') ? 
                 <PiHandDepositBold />
                 :
                 <PiHandDepositBold />

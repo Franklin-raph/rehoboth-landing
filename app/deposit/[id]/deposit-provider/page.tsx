@@ -4,15 +4,13 @@ import SideNav from '@/app/components/side-nav/SideNav'
 import TopNav from '@/app/components/top-nav/TopNav'
 import { RiBankLine } from "react-icons/ri";
 import React from 'react'
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 const page = () => {
 
   const pathname = usePathname()
-  const router = useRouter()
-  const country = decodeURIComponent(pathname.split("/deposit/")[1])
 
-  console.log(pathname);
+  console.log(decodeURIComponent(pathname.split("/deposit/")[1]));
   
 
   return (
@@ -27,15 +25,17 @@ const page = () => {
                     <p className='font-[300] text-[#737985]'>Buy crypto with your money</p>
                   </div>
                   <div className='mt-9'>
-                    <h2 className="text-center text-[#151517] mb-2">Choose your deposit method</h2>
+                    <h2 className="text-center text-[#151517] mb-2">Choose a provider</h2>
                     <div className='flex items-center gap-5'>
                         <div className="w-[500px] mx-auto p-2 bg-[#F8F8F8] rounded-lg border border-[#B2B2B27A]">
                             <div className='bg-white p-3 rounded-[8px]'>
                               <div className='flex items-center justify-between'>
                                 <div>
-                                  <p className='text-[#121212]'>Bank Transfer</p>
+                                  <p className='text-[#121212]'>Link</p>
                                   <p className='font-300 text-[#828282]'>
-                                    {country}
+                                    {
+                                      decodeURIComponent(pathname.split("/deposit/")[1])
+                                    }
                                   </p>
                                 </div>
                                 <div className='bg-[#CCD6FF54] p-1 rounded-full'>
@@ -43,12 +43,12 @@ const page = () => {
                                 </div>
                               </div>
                               <div className='mt-5'>
-                                <p className='text-primary-color'>Transfer Time</p>
-                                <p className='font-300 text-[#828282]'>Dynamic partner fees</p>
+                                <p className='text-primary-color'>Provider fee</p>
+                                <p className='font-300 text-[#828282]'>0 - 15 hours</p>
                               </div>
                             </div>
                             <div className='flex items-center justify-center'>
-                              <button className='py-2 w-[90%] mx-auto text-white bg-primary-color rounded-[6px] mb-3 mt-[4rem]' onClick={() => router.replace(`/deposit/${pathname.split("/deposit/")[1]}/deposit-provider`)} >Proceed</button>
+                              <button className='py-2 w-[90%] mx-auto text-white bg-primary-color rounded-[6px] mb-3 mt-[4rem]'>Proceed</button>
                             </div>
                         </div>
                     </div>
